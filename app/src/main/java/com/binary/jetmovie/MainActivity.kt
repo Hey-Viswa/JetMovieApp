@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.binary.jetmovie.components.MainContent
 import com.binary.jetmovie.components.MyApp
+import com.binary.jetmovie.navigation.MovieNavigation
 import com.binary.jetmovie.ui.theme.JetMovieTheme
 
 @ExperimentalMaterial3Api
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
                 MyApp {
-                    MainContent()
+                   MovieNavigation()
                 }
             }
         }

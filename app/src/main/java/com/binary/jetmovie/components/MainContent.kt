@@ -10,10 +10,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.binary.jetmovie.navigation.MoviesScreens
 
-@Preview
+
 @Composable
 fun MainContent(
+    navController: NavController,
     movieList: List<String> = listOf(
         "Avatar",
         "Hexa",
@@ -49,7 +52,8 @@ fun MainContent(
             items(items = movieList) {
                 MovieRow(movie = it){
                     movie ->
-                    Log.d("Tag", "MainContent: $movie")
+                   // Log.d("Tag", "MainContent: $movie")
+                    navController.navigate(route = MoviesScreens.DetailScreen.name)
                 }
             }
         }

@@ -21,25 +21,7 @@ import com.binary.jetmovie.ui.theme.JetMovieTheme
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
     JetMovieTheme {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    colors = TopAppBarDefaults.smallTopAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        titleContentColor = MaterialTheme.colorScheme.primary,
-                    ),
-                    title = {
-                        Text("Movie")
-                    },
-                )
-            },
-        ) { innerPadding ->
-            Column(
-                modifier = Modifier.padding(innerPadding)
-            ) {
-                MainContent()
-            }
-        }
+        content()
     }
 }
 
