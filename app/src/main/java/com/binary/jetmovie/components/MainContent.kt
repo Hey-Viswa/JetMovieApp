@@ -10,50 +10,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.binary.jetmovie.navigation.MoviesScreens
+import com.binary.jetmovie.widget.MovieRow
 
 
 @Composable
 fun MainContent(
     navController: NavController,
-    movieList: List<String> = listOf(
-        "Avatar",
-        "Hexa",
-        "life",
-        "Harry",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life", "Avatar",
-        "Hexa",
-        "life",
-        "Harry",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-        "Avatar",
-        "Hexa",
-        "life",
-    )
+    movieList: List<Movie> = getMovies()
 ) {
     Column(
         modifier = Modifier
